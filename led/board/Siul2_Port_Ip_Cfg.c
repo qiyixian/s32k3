@@ -1,5 +1,5 @@
 /*==================================================================================================
-*   Project              : RTD AUTOSAR 4.7 
+*   Project              : RTD AUTOSAR 4.7
 *   Platform             : CORTEXM
 *   Peripheral           : SIUL2
 *   Dependencies         : none
@@ -8,9 +8,10 @@
 *   Autosar Revision     : ASR_REL_4_7_REV_0000
 *   Autosar Conf.Variant :
 *   SW Version           : 3.0.0
-*   Build Version        : S32K3_AUTOSAR_4_4_-_R21-11_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
 *
-*   Copyright 2020 - 2023 NXP Semiconductors
+*   (c) Copyright 2020 - 2023 NXP Semiconductors
+*   All Rights Reserved.
 *
 *   NXP Confidential. This software is owned or controlled by NXP and may only be
 *   used strictly in accordance with the applicable license terms. By expressly
@@ -22,7 +23,7 @@
 ==================================================================================================*/
 
 /**
-*   @file      Siul2_Port_Ip_Cfg.h
+*   @file      Siul2_Port_Ip_Cfg.c
 *
 *   @addtogroup Port_CFG
 *   @{
@@ -98,60 +99,6 @@ extern "C"{
                                            GLOBAL VARIABLES
 ==================================================================================================*/
 
-/* clang-format off */
-
-/*
- * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
-BOARD_InitPins:
-- options: {callFromInitBoot: 'true', coreID: M7_0}
-- pin_list:
-  - {pin_num: '137', peripheral: SIUL2, signal: 'gpio, 0', pin_signal: PTA0, direction: INPUT/OUTPUT}
- * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
- */
-/* clang-format on */
-
-#define PORT_START_SEC_CONFIG_DATA_UNSPECIFIED
-#include "Port_MemMap.h"
-
-/*! @brief Array of pin configuration structures */
-const Siul2_Port_Ip_PinSettingsConfig g_pin_mux_InitConfigArr0[NUM_OF_CONFIGURED_PINS0] =
-{
-    {
-        .base                        = IP_SIUL2,
-        .pinPortIdx                  = 0u,
-        .mux                         = PORT_MUX_AS_GPIO,
-        .safeMode                    = PORT_SAFE_MODE_DISABLED,
-        .inputFilter                 = PORT_INPUT_FILTER_NOT_AVAILABLE,
-        .pullConfig                  = PORT_INTERNAL_PULL_NOT_ENABLED,
-        .pullKeep                    = PORT_PULL_KEEP_DISABLED,
-        .invert                      = PORT_INVERT_DISABLED,
-        .inputBuffer                 = PORT_INPUT_BUFFER_ENABLED,
-        .outputBuffer                = PORT_OUTPUT_BUFFER_ENABLED,
-        .adcInterleaves              = { MUX_MODE_NOT_AVAILABLE, MUX_MODE_NOT_AVAILABLE },
-        .inputMux                    = {
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT,
-                                         PORT_INPUT_MUX_NO_INIT
-                                       },
-        .initValue                   = 0u
-    },
-};
-
-#define PORT_STOP_SEC_CONFIG_DATA_UNSPECIFIED
-#include "Port_MemMap.h"
 
 /*==================================================================================================
                                       LOCAL FUNCTION PROTOTYPES
@@ -171,4 +118,5 @@ const Siul2_Port_Ip_PinSettingsConfig g_pin_mux_InitConfigArr0[NUM_OF_CONFIGURED
 #endif
 
 /** @} */
+
 

@@ -41,6 +41,7 @@ extern "C"{
 * 2) needed interfaces from external units
 * 3) internal and external interfaces from this unit
 ==================================================================================================*/
+#include "Igf_Port_Ip_Types.h"
 /*==================================================================================================
 *                              SOURCE FILE VERSION INFORMATION
 ==================================================================================================*/
@@ -55,6 +56,27 @@ extern "C"{
 /*==================================================================================================
 *                                     FILE VERSION CHECKS
 ==================================================================================================*/
+/* Check if the files Igf_Port_Ip_Cfg.h and Igf_Port_Ip_Types.h are of the same version */
+#if (IGF_PORT_IP_VENDOR_ID_CFG_H != IGF_PORT_IP_TYPES_VENDOR_ID_H)
+    #error "Igf_Port_Ip_Cfg.h and Igf_Port_Ip_Types.h have different vendor ids"
+#endif
+
+/* Check if Igf_Port_Ip_Cfg.h and Igf_Port_Ip_Types.h are of the same Autosar version */
+#if ((IGF_PORT_IP_AR_RELEASE_MAJOR_VERSION_CFG_H    != IGF_PORT_IP_TYPES_AR_RELEASE_MAJOR_VERSION_H) || \
+     (IGF_PORT_IP_AR_RELEASE_MINOR_VERSION_CFG_H    != IGF_PORT_IP_TYPES_AR_RELEASE_MINOR_VERSION_H) || \
+     (IGF_PORT_IP_AR_RELEASE_REVISION_VERSION_CFG_H != IGF_PORT_IP_TYPES_AR_RELEASE_REVISION_VERSION_H) \
+    )
+    #error "AutoSar Version Numbers of Igf_Port_Ip_Cfg.h and Igf_Port_Ip_Types.h are different"
+#endif
+
+/* Check if Igf_Port_Ip_Cfg.h and Igf_Port_Ip_Types.h are of the same Software version */
+#if ((IGF_PORT_IP_SW_MAJOR_VERSION_CFG_H != IGF_PORT_IP_TYPES_SW_MAJOR_VERSION_H) || \
+     (IGF_PORT_IP_SW_MINOR_VERSION_CFG_H != IGF_PORT_IP_TYPES_SW_MINOR_VERSION_H) || \
+     (IGF_PORT_IP_SW_PATCH_VERSION_CFG_H != IGF_PORT_IP_TYPES_SW_PATCH_VERSION_H)    \
+    )
+    #error "Software Version Numbers of Igf_Port_Ip_Cfg.h and Igf_Port_Ip_Types.h are different"
+#endif
+
 /*==================================================================================================
 *                                          CONSTANTS
 ==================================================================================================*/

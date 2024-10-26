@@ -1,5 +1,5 @@
 /*==================================================================================================
-*   Project              : RTD AUTOSAR 4.7 
+*   Project              : RTD AUTOSAR 4.7
 *   Platform             : CORTEXM
 *   Peripheral           : SIUL2
 *   Dependencies         : none
@@ -8,7 +8,7 @@
 *   Autosar Revision     : ASR_REL_4_7_REV_0000
 *   Autosar Conf.Variant :
 *   SW Version           : 3.0.0
-*   Build Version        : S32K3_AUTOSAR_4_4_-_R21-11_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
 *
 *   Copyright 2020 - 2023 NXP Semiconductors
 *
@@ -25,7 +25,7 @@
 #define SIUL2_PORT_IP_CFG_H
 
 /**
-*   @file      Siul2_Port_Ip_Cfg.h
+*   @file    Siul2_Port_Ip_Cfg.h
 *
 *   @addtogroup Port_CFG
 *   @{
@@ -35,15 +35,15 @@
 extern "C"{
 #endif
 
-
 /*==================================================================================================
-                                         INCLUDE FILES
- 1) system and project includes
- 2) needed interfaces from external units
- 3) internal and external interfaces from this unit
+*                                        INCLUDE FILES
+* 1) system and project includes
+* 2) needed interfaces from external units
+* 3) internal and external interfaces from this unit
 ==================================================================================================*/
-#include "S32K344_SIUL2.h"
 #include "Siul2_Port_Ip_Types.h"
+
+#include "Siul2_Port_Ip_PBcfg.h"
 
 /*==================================================================================================
 *                              SOURCE FILE VERSION INFORMATION
@@ -63,6 +63,7 @@ extern "C"{
 #if (SIUL2_PORT_IP_VENDOR_ID_CFG_H != SIUL2_PORT_IP_TYPES_VENDOR_ID_H)
     #error "Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_Types.h have different vendor ids"
 #endif
+
 /* Check if Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_Types.h are of the same Autosar version */
 #if ((SIUL2_PORT_IP_AR_RELEASE_MAJOR_VERSION_CFG_H    != SIUL2_PORT_IP_TYPES_AR_RELEASE_MAJOR_VERSION_H) || \
      (SIUL2_PORT_IP_AR_RELEASE_MINOR_VERSION_CFG_H    != SIUL2_PORT_IP_TYPES_AR_RELEASE_MINOR_VERSION_H) || \
@@ -70,6 +71,7 @@ extern "C"{
     )
     #error "AutoSar Version Numbers of Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_Types.h are different"
 #endif
+
 /* Check if Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_Types.h are of the same Software version */
 #if ((SIUL2_PORT_IP_SW_MAJOR_VERSION_CFG_H != SIUL2_PORT_IP_TYPES_SW_MAJOR_VERSION_H) || \
      (SIUL2_PORT_IP_SW_MINOR_VERSION_CFG_H != SIUL2_PORT_IP_TYPES_SW_MINOR_VERSION_H) || \
@@ -77,13 +79,33 @@ extern "C"{
     )
     #error "Software Version Numbers of Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_Types.h are different"
 #endif
+
+/* Check if the files Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_PBcfg.h are of the same version */
+#if (SIUL2_PORT_IP_VENDOR_ID_CFG_H != SIUL2_PORT_IP_VENDOR_ID_PBCFG_H)
+    #error "Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_PBcfg.h have different vendor IDs"
+#endif
+/* Check if the files Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_PBcfg.h are of the same Autosar version */
+#if ((SIUL2_PORT_IP_AR_RELEASE_MAJOR_VERSION_CFG_H != SIUL2_PORT_IP_AR_RELEASE_MAJOR_VERSION_PBCFG_H) ||   \
+     (SIUL2_PORT_IP_AR_RELEASE_MINOR_VERSION_CFG_H != SIUL2_PORT_IP_AR_RELEASE_MINOR_VERSION_PBCFG_H) ||   \
+     (SIUL2_PORT_IP_AR_RELEASE_REVISION_VERSION_CFG_H != SIUL2_PORT_IP_AR_RELEASE_REVISION_VERSION_PBCFG_H) \
+    )
+    #error "AutoSar Version Numbers of Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_PBcfg.h are different"
+#endif
+/* Check if the files Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_PBcfg.h are of the same software version */
+#if ((SIUL2_PORT_IP_SW_MAJOR_VERSION_CFG_H != SIUL2_PORT_IP_SW_MAJOR_VERSION_PBCFG_H) || \
+     (SIUL2_PORT_IP_SW_MINOR_VERSION_CFG_H != SIUL2_PORT_IP_SW_MINOR_VERSION_PBCFG_H) || \
+     (SIUL2_PORT_IP_SW_PATCH_VERSION_CFG_H != SIUL2_PORT_IP_SW_PATCH_VERSION_PBCFG_H)     \
+    )
+    #error "Software Version Numbers of Siul2_Port_Ip_Cfg.h and Siul2_Port_Ip_PBcfg.h are different"
+#endif
 /*==================================================================================================
-                                           CONSTANTS
+*                                          CONSTANTS
 ==================================================================================================*/
 
 /*==================================================================================================
-                                      DEFINES AND MACROS
+*                                      DEFINES AND MACROS
 ==================================================================================================*/
+
 #define SIUL2_MSCR_SSS_MASK                      (0xFU)
 #define SIUL2_MSCR_SSS_SHIFT                     (0U)
 #define SIUL2_MSCR_SSS_WIDTH                     (4U)
@@ -94,40 +116,37 @@ extern "C"{
 #define SIUL2_MSCR_SRE_WIDTH                     (1U)
 #define SIUL2_MSCR_SRE(x)                        (((uint32)(((uint32)(x)) << SIUL2_MSCR_SRE_SHIFT)) & SIUL2_MSCR_SRE_MASK)
 
-
-/*! @brief Definitions for BOARD_InitPins Functional Group */
-
 /*! @brief User number of configured pins */
-#define NUM_OF_CONFIGURED_PINS0 1
+#define NUM_OF_CONFIGURED_PINS 1
 
 #define PORT_START_SEC_CONFIG_DATA_UNSPECIFIED
 #include "Port_MemMap.h"
 
-/*! @brief User configuration structure */
-extern const Siul2_Port_Ip_PinSettingsConfig g_pin_mux_InitConfigArr0[NUM_OF_CONFIGURED_PINS0];
+SIUL2_PORT_CONFIG_PB \
 
 #define PORT_STOP_SEC_CONFIG_DATA_UNSPECIFIED
 #include "Port_MemMap.h"
-
 /*==================================================================================================
-                                           ENUMS
+*                                             ENUMS
 ==================================================================================================*/
 
 /*==================================================================================================
-                               STRUCTURES AND OTHER TYPEDEFS
+*                                STRUCTURES AND OTHER TYPEDEFS
 ==================================================================================================*/
 
 /*==================================================================================================
-                               GLOBAL VARIABLE DECLARATIONS
+*                                GLOBAL VARIABLE DECLARATIONS
 ==================================================================================================*/
 
 /*==================================================================================================
-                               FUNCTION PROTOTYPES
+*                                    FUNCTION PROTOTYPES
 ==================================================================================================*/
+
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* SIUL2_PORT_IP_CFG_H */
+/** @} */
 
+#endif /* SIUL2_PORT_IP_CFG_H */

@@ -1,5 +1,5 @@
 /*==================================================================================================
-*   Project              : RTD AUTOSAR 4.7 
+*   Project              : RTD AUTOSAR 4.7
 *   Platform             : CORTEXM
 *   Peripheral           : SIUL2
 *   Dependencies         : none
@@ -8,7 +8,7 @@
 *   Autosar Revision     : ASR_REL_4_7_REV_0000
 *   Autosar Conf.Variant :
 *   SW Version           : 3.0.0
-*   Build Version        : S32K3_AUTOSAR_4_4_-_R21-11_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
 *
 *   Copyright 2020 - 2023 NXP Semiconductors
 *
@@ -25,7 +25,7 @@
 #define TSPC_PORT_IP_CFG_H
 
 /**
-*   @file      Tspc_Port_Ip_Cfg.h
+*   @file    Tspc_Port_Ip_Cfg.h
 *
 *   @addtogroup Port_CFG
 *   @{
@@ -35,16 +35,15 @@
 extern "C"{
 #endif
 
-
 /*==================================================================================================
-                                         INCLUDE FILES
- 1) system and project includes
- 2) needed interfaces from external units
- 3) internal and external interfaces from this unit
+*                                        INCLUDE FILES
+* 1) system and project includes
+* 2) needed interfaces from external units
+* 3) internal and external interfaces from this unit
 ==================================================================================================*/
 #include "Tspc_Port_Ip_Types.h"
 #include "S32K344_TSPC.h"
-
+#include "Tspc_Port_Ip_PBcfg.h"
 /*==================================================================================================
 *                              SOURCE FILE VERSION INFORMATION
 ==================================================================================================*/
@@ -63,51 +62,83 @@ extern "C"{
 #if (TSPC_PORT_IP_VENDOR_ID_CFG_H != TSPC_PORT_IP_TYPES_VENDOR_ID_H)
     #error "Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_Types.h have different vendor ids"
 #endif
+
 /* Check if Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_Types.h are of the same Autosar version */
 #if ((TSPC_PORT_IP_AR_RELEASE_MAJOR_VERSION_CFG_H    != TSPC_PORT_IP_TYPES_AR_RELEASE_MAJOR_VERSION_H) || \
-    (TSPC_PORT_IP_AR_RELEASE_MINOR_VERSION_CFG_H    != TSPC_PORT_IP_TYPES_AR_RELEASE_MINOR_VERSION_H) || \
-    (TSPC_PORT_IP_AR_RELEASE_REVISION_VERSION_CFG_H != TSPC_PORT_IP_TYPES_AR_RELEASE_REVISION_VERSION_H) \
+     (TSPC_PORT_IP_AR_RELEASE_MINOR_VERSION_CFG_H    != TSPC_PORT_IP_TYPES_AR_RELEASE_MINOR_VERSION_H) || \
+     (TSPC_PORT_IP_AR_RELEASE_REVISION_VERSION_CFG_H != TSPC_PORT_IP_TYPES_AR_RELEASE_REVISION_VERSION_H) \
     )
     #error "AutoSar Version Numbers of Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_Types.h are different"
 #endif
+
 /* Check if Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_Types.h are of the same Software version */
 #if ((TSPC_PORT_IP_SW_MAJOR_VERSION_CFG_H != TSPC_PORT_IP_TYPES_SW_MAJOR_VERSION_H) || \
-    (TSPC_PORT_IP_SW_MINOR_VERSION_CFG_H != TSPC_PORT_IP_TYPES_SW_MINOR_VERSION_H) || \
-    (TSPC_PORT_IP_SW_PATCH_VERSION_CFG_H != TSPC_PORT_IP_TYPES_SW_PATCH_VERSION_H)    \
+     (TSPC_PORT_IP_SW_MINOR_VERSION_CFG_H != TSPC_PORT_IP_TYPES_SW_MINOR_VERSION_H) || \
+     (TSPC_PORT_IP_SW_PATCH_VERSION_CFG_H != TSPC_PORT_IP_TYPES_SW_PATCH_VERSION_H)    \
     )
     #error "Software Version Numbers of Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_Types.h are different"
 #endif
+
+/* Check if the files Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_PBcfg.h are of the same version */
+#if (TSPC_PORT_IP_VENDOR_ID_CFG_H != TSPC_PORT_IP_VENDOR_ID_PBCFG_H)
+    #error "Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_PBcfg.h have different vendor IDs"
+#endif
+/* Check if the files Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_PBcfg.h are of the same Autosar version */
+#if ((TSPC_PORT_IP_AR_RELEASE_MAJOR_VERSION_CFG_H != TSPC_PORT_IP_AR_RELEASE_MAJOR_VERSION_PBCFG_H) ||   \
+     (TSPC_PORT_IP_AR_RELEASE_MINOR_VERSION_CFG_H != TSPC_PORT_IP_AR_RELEASE_MINOR_VERSION_PBCFG_H) ||   \
+     (TSPC_PORT_IP_AR_RELEASE_REVISION_VERSION_CFG_H != TSPC_PORT_IP_AR_RELEASE_REVISION_VERSION_PBCFG_H) \
+    )
+    #error "AutoSar Version Numbers of Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_PBcfg.h are different"
+#endif
+/* Check if the files Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_PBcfg.h are of the same software version */
+#if ((TSPC_PORT_IP_SW_MAJOR_VERSION_CFG_H != TSPC_PORT_IP_SW_MAJOR_VERSION_PBCFG_H) || \
+     (TSPC_PORT_IP_SW_MINOR_VERSION_CFG_H != TSPC_PORT_IP_SW_MINOR_VERSION_PBCFG_H) || \
+     (TSPC_PORT_IP_SW_PATCH_VERSION_CFG_H != TSPC_PORT_IP_SW_PATCH_VERSION_PBCFG_H)     \
+    )
+    #error "Software Version Numbers of Tspc_Port_Ip_Cfg.h and Tspc_Port_Ip_PBcfg.h are different"
+#endif
 /*==================================================================================================
-                                           CONSTANTS
+*                                          CONSTANTS
 ==================================================================================================*/
 
 /*==================================================================================================
-                                      DEFINES AND MACROS
+*                                      DEFINES AND MACROS
 ==================================================================================================*/
 /* Pre-processor switch to enable/disable Touch Sense support */
-#define FEATURE_TSPC_PORT_IP_SUPPORT      (STD_ON)
+#define FEATURE_TSPC_PORT_IP_SUPPORT      (STD_OFF)
 
-/*! @brief No pin was configured for this group or no need any configuration */
+/*! @brief User number of configured pins */
+#define NUM_OF_OBE_GROUP_CONFIG 1
+
+#define PORT_START_SEC_CONFIG_DATA_UNSPECIFIED
+#include "Port_MemMap.h"
+
+TSPC_PORT_CONFIG_PB \
+
+#define PORT_STOP_SEC_CONFIG_DATA_UNSPECIFIED
+#include "Port_MemMap.h"
 
 /*==================================================================================================
-                                           ENUMS
+*                                             ENUMS
 ==================================================================================================*/
 
 /*==================================================================================================
-                               STRUCTURES AND OTHER TYPEDEFS
+*                                STRUCTURES AND OTHER TYPEDEFS
 ==================================================================================================*/
 
 /*==================================================================================================
-                               GLOBAL VARIABLE DECLARATIONS
+*                                GLOBAL VARIABLE DECLARATIONS
 ==================================================================================================*/
 
 /*==================================================================================================
-                               FUNCTION PROTOTYPES
+*                                    FUNCTION PROTOTYPES
 ==================================================================================================*/
+
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* TSPC_PORT_IP_CFG_H */
+/** @} */
 
+#endif /* TSPC_PORT_IP_CFG_H */
