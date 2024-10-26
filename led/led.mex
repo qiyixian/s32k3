@@ -2,7 +2,7 @@
 <configuration name="S32K344" xsi:schemaLocation="http://mcuxpresso.nxp.com/XSD/mex_configuration_15 http://mcuxpresso.nxp.com/XSD/mex_configuration_15.xsd" uuid="cb0a0571-31b0-4026-b225-2a0da4ce6ac1" version="15" xmlns="http://mcuxpresso.nxp.com/XSD/mex_configuration_15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <common>
       <processor>S32K344</processor>
-      <package>S32K344_257BGA</package>
+      <package>S32K344_172MQFP</package>
       <mcu_data>PlatformSDK_S32K3</mcu_data>
       <cores selected="M7_0">
          <core name="Cortex-M7" id="M7_0" description=""/>
@@ -17,7 +17,7 @@
       <generate_registers_defines>false</generate_registers_defines>
    </preferences>
    <tools>
-      <pins name="Pins" version="11.0" enabled="true" update_project_code="true">
+      <pins name="Pins" version="15.0" enabled="true" update_project_code="true">
          <generated_project_files>
             <file path="board/Siul2_Port_Ip_Cfg.c" update_enabled="true"/>
             <file path="board/Siul2_Port_Ip_Cfg.h" update_enabled="true"/>
@@ -32,6 +32,7 @@
                <description>Configures pin routing and optionally pin electrical features.</description>
                <options>
                   <callFromInitBoot>true</callFromInitBoot>
+                  <coreID>M7_0</coreID>
                </options>
                <dependencies>
                   <dependency resourceType="SWComponent" resourceId="platform.driver.pins" description="Pins initialization requires the PINS Driver in the project." problem_level="2" source="Pins:BOARD_InitPins">
@@ -41,7 +42,7 @@
                   </dependency>
                </dependencies>
                <pins>
-                  <pin peripheral="SIUL2" signal="gpio, 0" pin_num="A13" pin_signal="PTA0">
+                  <pin peripheral="SIUL2" signal="gpio, 0" pin_num="137" pin_signal="PTA0">
                      <pin_features>
                         <pin_feature name="direction" value="INPUT/OUTPUT"/>
                      </pin_features>
@@ -50,7 +51,7 @@
             </function>
          </functions_list>
       </pins>
-      <clocks name="Clocks" version="9.0" enabled="true" update_project_code="true">
+      <clocks name="Clocks" version="13.0" enabled="true" update_project_code="true">
          <generated_project_files>
             <file path="generate/include/Clock_Ip_Cfg.h" update_enabled="true"/>
             <file path="generate/include/Clock_Ip_Cfg_Defines.h" update_enabled="true"/>
@@ -247,7 +248,7 @@
                   <clock_output id="SCS_CLK.outFreq" value="160 MHz" locked="false" accuracy=""/>
                   <clock_output id="SEMA42_CLK.outFreq" value="80 MHz" locked="false" accuracy=""/>
                   <clock_output id="SIRCOUT.outFreq" value="32 kHz" locked="false" accuracy=""/>
-                  <clock_output id="SIUL0_CLK.outFreq" value="40 MHz" locked="false" accuracy=""/>
+                  <clock_output id="SIUL2_CLK.outFreq" value="40 MHz" locked="false" accuracy=""/>
                   <clock_output id="STCU0_CLK.outFreq" value="40 MHz" locked="false" accuracy=""/>
                   <clock_output id="STM0_CLK.outFreq" value="48 MHz" locked="false" accuracy=""/>
                   <clock_output id="STM1_CLK.outFreq" value="48 MHz" locked="false" accuracy=""/>
@@ -325,28 +326,29 @@
          </efuse_profile>
       </efuse>
       <gtm name="GTM" version="1.0" enabled="false" update_project_code="true">
+         <generated_project_files/>
          <gtm_profile>
             <processor_version>N/A</processor_version>
          </gtm_profile>
       </gtm>
-      <periphs name="Peripherals" version="11.0" enabled="true" update_project_code="true">
+      <periphs name="Peripherals" version="14.0" enabled="true" update_project_code="true">
          <dependencies>
-            <dependency resourceType="SWComponent" resourceId="platform.driver.osif" description="osif not found in the toolchain/IDE project. Project will not compile!" problem_level="2" source="Peripherals">
+            <dependency resourceType="SWComponent" resourceId="platform.driver.osif" description="工具链/IDE工程中未找到osif。工程不会被编译！" problem_level="2" source="Peripherals">
                <feature name="enabled" evaluation="equal">
                   <data type="Boolean">true</data>
                </feature>
             </dependency>
-            <dependency resourceType="SWComponent" resourceId="platform.driver.osif" description="Unsupported version of the osif in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. Project might not compile correctly." problem_level="1" source="Peripherals">
+            <dependency resourceType="SWComponent" resourceId="platform.driver.osif" description="工具链/IDE工程不支持osif版本。所需值: ${required_value}, 实际值: ${actual_value}. 工程可能没有被正确编译。" problem_level="1" source="Peripherals">
                <feature name="version" evaluation="equivalent">
                   <data type="Version">1.0.0</data>
                </feature>
             </dependency>
-            <dependency resourceType="SWComponent" resourceId="platform.driver.siul2_port" description="siul2_port not found in the toolchain/IDE project. Project will not compile!" problem_level="2" source="Peripherals">
+            <dependency resourceType="SWComponent" resourceId="platform.driver.siul2_port" description="工具链/IDE工程中未找到siul2_port。工程不会被编译！" problem_level="2" source="Peripherals">
                <feature name="enabled" evaluation="equal">
                   <data type="Boolean">true</data>
                </feature>
             </dependency>
-            <dependency resourceType="SWComponent" resourceId="platform.driver.siul2_port" description="Unsupported version of the siul2_port in the toolchain/IDE project. Required: ${required_value}, actual: ${actual_value}. Project might not compile correctly." problem_level="1" source="Peripherals">
+            <dependency resourceType="SWComponent" resourceId="platform.driver.siul2_port" description="工具链/IDE工程不支持siul2_port版本。所需值: ${required_value}, 实际值: ${actual_value}. 工程可能没有被正确编译。" problem_level="1" source="Peripherals">
                <feature name="version" evaluation="equivalent">
                   <data type="Version">1.0.0</data>
                </feature>
@@ -363,7 +365,7 @@
             <processor_version>0.0.0</processor_version>
          </peripherals_profile>
          <functional_groups>
-            <functional_group name="BOARD_InitPeripherals" uuid="343d8c09-29ab-44df-a8a2-0e35bf16a60f" called_from_default_init="true" id_prefix="" core="">
+            <functional_group name="BOARD_InitPeripherals" uuid="343d8c09-29ab-44df-a8a2-0e35bf16a60f" called_from_default_init="true" id_prefix="" core="M7_0">
                <description></description>
                <options/>
                <dependencies/>

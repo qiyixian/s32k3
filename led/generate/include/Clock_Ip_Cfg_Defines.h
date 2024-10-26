@@ -1,5 +1,5 @@
 /*==================================================================================================
-*   Project              : RTD AUTOSAR R21-11
+*   Project              : RTD AUTOSAR 4.7
 *   Platform             : CORTEXM
 *   Peripheral           : S32K3XX
 *   Dependencies         : none
@@ -341,29 +341,28 @@ extern "C"{
 #define CLOCK_IP_HAS_PIT0_CLK         118U
 #define CLOCK_IP_HAS_PIT1_CLK         119U
 #define CLOCK_IP_HAS_PIT2_CLK         120U
-#define CLOCK_IP_HAS_QSPI_2XSFIF_CLK         121U
-#define CLOCK_IP_HAS_QSPI0_CLK         122U
-#define CLOCK_IP_HAS_QSPI0_RAM_CLK         123U
-#define CLOCK_IP_HAS_QSPI0_TX_MEM_CLK         124U
-#define CLOCK_IP_HAS_QSPI_SFCK_CLK         125U
-#define CLOCK_IP_HAS_RTC_CLK         126U
-#define CLOCK_IP_HAS_RTC0_CLK         127U
-#define CLOCK_IP_HAS_SAI0_CLK         128U
-#define CLOCK_IP_HAS_SAI1_CLK         129U
-#define CLOCK_IP_HAS_SEMA42_CLK         130U
-#define CLOCK_IP_HAS_SIUL2_CLK         131U
-#define CLOCK_IP_HAS_STCU0_CLK         132U
-#define CLOCK_IP_HAS_STMA_CLK         133U
-#define CLOCK_IP_HAS_STM0_CLK         134U
-#define CLOCK_IP_HAS_STMB_CLK         135U
-#define CLOCK_IP_HAS_STM1_CLK         136U
-#define CLOCK_IP_HAS_SWT0_CLK         137U
-#define CLOCK_IP_HAS_TEMPSENSE_CLK         138U
-#define CLOCK_IP_HAS_TRACE_CLK         139U
-#define CLOCK_IP_HAS_TRGMUX0_CLK         140U
-#define CLOCK_IP_HAS_TSENSE0_CLK         141U
-#define CLOCK_IP_HAS_WKPU0_CLK         142U
-#define CLOCK_IP_FEATURE_NAMES_NO         143U
+#define CLOCK_IP_HAS_QSPI0_CLK         121U
+#define CLOCK_IP_HAS_QSPI0_RAM_CLK         122U
+#define CLOCK_IP_HAS_QSPI0_TX_MEM_CLK         123U
+#define CLOCK_IP_HAS_QSPI_SFCK_CLK         124U
+#define CLOCK_IP_HAS_RTC_CLK         125U
+#define CLOCK_IP_HAS_RTC0_CLK         126U
+#define CLOCK_IP_HAS_SAI0_CLK         127U
+#define CLOCK_IP_HAS_SAI1_CLK         128U
+#define CLOCK_IP_HAS_SEMA42_CLK         129U
+#define CLOCK_IP_HAS_SIUL2_CLK         130U
+#define CLOCK_IP_HAS_STCU0_CLK         131U
+#define CLOCK_IP_HAS_STMA_CLK         132U
+#define CLOCK_IP_HAS_STM0_CLK         133U
+#define CLOCK_IP_HAS_STMB_CLK         134U
+#define CLOCK_IP_HAS_STM1_CLK         135U
+#define CLOCK_IP_HAS_SWT0_CLK         136U
+#define CLOCK_IP_HAS_TEMPSENSE_CLK         137U
+#define CLOCK_IP_HAS_TRACE_CLK         138U
+#define CLOCK_IP_HAS_TRGMUX0_CLK         139U
+#define CLOCK_IP_HAS_TSENSE0_CLK         140U
+#define CLOCK_IP_HAS_WKPU0_CLK         141U
+#define CLOCK_IP_FEATURE_NAMES_NO         142U
 
 
 /*==================================================================================================

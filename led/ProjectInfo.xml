@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<export>
+    <PROCESSOR>
+        <DeviceID>S32K344</DeviceID>
+        <CoreNum>1</CoreNum>
+        <Cores>
+            <Core>
+                <CoreID>S32K344_M7</CoreID>
+            </Core>
+        </Cores>
+        <SRAMsize>0K</SRAMsize>
+        <FLASHsize>0K</FLASHsize>
+    </PROCESSOR>
+    <PATHS>
+        <LinkerCommandFile>E:\Fork\s32k3\led\Project_Settings\Linker_Files\linker_flash_s32k344.icf</LinkerCommandFile>
+        <ProjectInfoPath>E:\Fork\s32k3\led\ProjectInfo.xml</ProjectInfoPath>
+        <IncludePaths>
+            <Path>E:\Fork\s32k3\led\RTD\include</Path>
+            <Path>E:\Fork\s32k3\led\generate\include</Path>
+            <Path>E:\Fork\s32k3\led\board</Path>
+            <Path>E:\NXP\S32DS.3.5\S32DS\software\PlatformSDK_S32K3\RTD\BaseNXP_TS_T40D34M30I0R0\header</Path>
+            <Path>E:\NXP\S32DS.3.5\S32DS\software\PlatformSDK_S32K3\RTD\BaseNXP_TS_T40D34M30I0R0\include</Path>
+            <Path>E:\NXP\S32DS.3.5\S32DS\software\PlatformSDK_S32K3\RTD\Platform_TS_T40D34M30I0R0\include</Path>
+            <Path>E:\NXP\S32DS.3.5\S32DS\software\PlatformSDK_S32K3\RTD\Platform_TS_T40D34M30I0R0\startup\include</Path>
+        </IncludePaths>
+        <SourceCodePaths>
+            <Path>E:\Fork\s32k3\led\Project_Settings</Path>
+            <Path>E:\Fork\s32k3\led\RTD</Path>
+            <Path>E:\Fork\s32k3\led\board</Path>
+            <Path>E:\Fork\s32k3\led\generate</Path>
+            <Path>E:\Fork\s32k3\led\src</Path>
+        </SourceCodePaths>
+        <LibPaths/>
+    </PATHS>
+    <FILES>
+        <GeneratedCs>
+            <PathName>E:\Fork\s32k3\led\Project_Settings\Startup_Code\exceptions.c</PathName>
+            <PathName>E:\Fork\s32k3\led\Project_Settings\Startup_Code\nvic.c</PathName>
+            <PathName>E:\Fork\s32k3\led\Project_Settings\Startup_Code\startup.c</PathName>
+            <PathName>E:\Fork\s32k3\led\Project_Settings\Startup_Code\system.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Data.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Divider.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_DividerTrigger.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_ExtOsc.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_FracDiv.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Frequency.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Gate.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_IntOsc.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Irq.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Monitor.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Pll.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_ProgFreqSwitch.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Selector.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Specific.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Det.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Det_stub.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Igf_Port_Ip.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\OsIf_Interrupts.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\OsIf_Timer.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\OsIf_Timer_System.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\OsIf_Timer_System_Internal_Systick.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\SchM_Mcu.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\SchM_Port.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Siul2_Port_Ip.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Tspc_Port_Ip.c</PathName>
+            <PathName>E:\Fork\s32k3\led\board\Siul2_Port_Ip_Cfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\board\Tspc_Port_Ip_Cfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\src\Clock_Ip_Cfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\src\Igf_Port_Ip_Cfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\src\OsIf_Cfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\src\main.c</PathName>
+        </GeneratedCs>
+        <GeneratedHs>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_001.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_002.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_003.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_004.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_005.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_006.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_007.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_008.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_009.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Private.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Specific.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_TrustedFunctions.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Det.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Det_stub.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Igf_Port_Ip.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Igf_Port_Ip_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Cfg_TypesDef.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_DeviceRegisters.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Internal.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Interrupts.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Timer_Custom.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Timer_System.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Timer_System_Internal_Systick.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\SchM_Mcu.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\SchM_Port.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Siul2_Port_Ip.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Siul2_Port_Ip_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Tspc_Port_Ip.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Tspc_Port_Ip_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\board\Siul2_Port_Ip_Cfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\board\Tspc_Port_Ip_Cfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Clock_Ip_Cfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Clock_Ip_Cfg_Defines.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Igf_Port_Ip_Cfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\OsIf_ArchCfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\OsIf_Cfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Siul2_Port_Ip_Defines.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\modules.h</PathName>
+        </GeneratedHs>
+        <GeneratedASMs>
+            <PathName>E:\Fork\s32k3\led\Project_Settings\Startup_Code\Vector_Table.s</PathName>
+            <PathName>E:\Fork\s32k3\led\Project_Settings\Startup_Code\startup_cm7.s</PathName>
+        </GeneratedASMs>
+        <Libraries/>
+        <ExcludedSourceEntries>
+            <PathName>Project_Settings/Linker_Files</PathName>
+            <PathName>Project_Settings/Debugger</PathName>
+        </ExcludedSourceEntries>
+    </FILES>
+    <OPTIONS>
+        <BuildOptions>
+            <ASMoptList>
+                <Option>--cpu Cortex-M7</Option>
+                <Option>--fpu VFPv5_sp</Option>
+                <Option>-s+</Option>
+                <Option>-r</Option>
+                <Option>-g</Option>
+                <Option>-I..\RTD\include</Option>
+                <Option>-I"E:\Fork\s32k3\led\board"</Option>
+                <Option>--cpu_mode thumb</Option>
+            </ASMoptList>
+            <CCoptList>
+                <Option>--no_mem_idioms --do_explicit_zero_opt_in_named_sections</Option>
+                <Option>--no_wrap_diagnostics</Option>
+                <Option>-I..\RTD\include</Option>
+                <Option>-IE:\Fork\s32k3\led\generate\include</Option>
+                <Option>-IE:\Fork\s32k3\led\board</Option>
+                <Option>-IE:\Fork\s32k3\led\RTD\include</Option>
+                <Option>-I"E:\NXP\S32DS.3.5\eclipse\\..\S32DS\software\PlatformSDK_S32K3\RTD\BaseNXP_TS_T40D34M30I0R0\\header\"</Option>
+                <Option>-I"E:\NXP\S32DS.3.5\eclipse\\..\S32DS\software\PlatformSDK_S32K3\RTD\BaseNXP_TS_T40D34M30I0R0\\include\"</Option>
+                <Option>-I"E:\NXP\S32DS.3.5\eclipse\\..\S32DS\software\PlatformSDK_S32K3\RTD\Platform_TS_T40D34M30I0R0\\include\"</Option>
+                <Option>-I"E:\NXP\S32DS.3.5\eclipse\\..\S32DS\software\PlatformSDK_S32K3\RTD\Platform_TS_T40D34M30I0R0\\startup\include\"</Option>
+                <Option>-e</Option>
+                <Option>--require_prototypes</Option>
+                <Option>--cpu Cortex-M7</Option>
+                <Option>--fpu VFPv5_sp</Option>
+                <Option>--debug</Option>
+                <Option>--dlib_config "C:\Program Files\IAR Systems\Embedded Workbench 9.1\arm\inc\c\DLib_Config_Normal.h"</Option>
+                <Option>--endian little</Option>
+                <Option>--cpu_mode thumb</Option>
+                <Option>-Ohz</Option>
+                <Option>--no_clustering</Option>
+                <Option>-DD_CACHE_ENABLE</Option>
+                <Option>-DI_CACHE_ENABLE</Option>
+                <Option>-DENABLE_FPU</Option>
+                <Option>-DMPU_ENABLE</Option>
+                <Option>-DIAR</Option>
+                <Option>-DS32K3XX</Option>
+                <Option>-DS32K344</Option>
+                <Option>-DCPU_S32K344</Option>
+                <Option>-DCPU_CORTEX_M7</Option>
+                <Option>--diag_suppress Pa050</Option>
+            </CCoptList>
+            <LinkerOptList>
+                <Option>--config ""E:\Fork\s32k3\led\Project_Settings\Linker_Files\linker_flash_s32k344.icf""</Option>
+                <Option>--cpu Cortex-M7</Option>
+                <Option>--fpu VFPv5_sp</Option>
+                <Option>--no_wrap_diagnostics</Option>
+                <Option>--entry Reset_Handler</Option>
+                <Option>--map "E:\Fork\s32k3\led\Debug\led.map"</Option>
+                <Option>--skip_dynamic_initialization --cpu=Cortex-M7 --fpu VFPv5_sp</Option>
+                <Option>--semihosting</Option>
+                <Option>--text_out locale</Option>
+                <Option>--no_bom</Option>
+                <Option>--enable_stack_usage</Option>
+            </LinkerOptList>
+        </BuildOptions>
+        <ToolchainOption>
+            <ToolchainID>IAR Toolchain for Arm - (9.x)</ToolchainID>
+            <SelectedBuildConfiguration>Debug</SelectedBuildConfiguration>
+        </ToolchainOption>
+        <SupportedBuildConfigurations>
+            <Option>Debug</Option>
+            <Option>Release</Option>
+            <Option>Debug_RAM</Option>
+        </SupportedBuildConfigurations>
+    </OPTIONS>
+</export>
