@@ -414,10 +414,10 @@
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 	<storageModule moduleId="com.nxp.s32ds.cle.uct.internal.core.toolchainScriptProfile">
-		<COND_TOOLCHAIN_COMPONENTS_OPTION>COPY=platform.driver.clock;platform.driver.adc;platform.driver.osif;platform.driver.mcu;platform.driver.port;platform.driver.FlexCAN;platform.driver.siul2_port;platform.driver.dio</COND_TOOLCHAIN_COMPONENTS_OPTION>
+		<COND_TOOLCHAIN_COMPONENTS_OPTION>COPY=platform.driver.clock;platform.driver.osif;platform.driver.mcu;platform.driver.port;platform.driver.dio</COND_TOOLCHAIN_COMPONENTS_OPTION>
 	</storageModule>
 	<storageModule moduleId="com.nxp.s32ds.cle.uct.core">
-		<sdkComponents>platform.driver.det;platform.driver.rte_port;platform.driver.rte_adc;platform.driver.rte_can;platform.driver.rte_dio;platform.driver.adc;platform.driver.FlexCAN;platform.driver.port;platform.driver.dio;platform.driver.osif;platform.driver.siul2_port;platform.driver.clock;platform.driver.rte_mcu;platform.driver.mcu</sdkComponents>
+		<sdkComponents>platform.driver.det;platform.driver.rte_port;platform.driver.rte_dio;platform.driver.port;platform.driver.dio;platform.driver.osif;platform.driver.clock;platform.driver.rte_mcu;platform.driver.mcu</sdkComponents>
 		<COND_TOOLCHAIN_ADD_REMOVE_COMPONENTS_OPTION>true</COND_TOOLCHAIN_ADD_REMOVE_COMPONENTS_OPTION>
 		<COND_TOOLCHAIN_COPY_SOURCES>true</COND_TOOLCHAIN_COPY_SOURCES>
 	</storageModule>

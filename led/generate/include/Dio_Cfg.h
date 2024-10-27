@@ -248,7 +248,7 @@ extern "C" {
 * @brief          Symbolic name for the channel Digital_Output_LED_PTB10.
 *
 */
-#define DioConf_DioChannel_DioChannel_pb10  ((uint16)0x002aU)
+#define DioConf_DioChannel_Digital_Output_LED_PTB10  ((uint16)0x002aU)
 /**
 * @brief          Symbolic name for the channel DioChannel_LED1.
 *
@@ -264,7 +264,7 @@ extern "C" {
 * @brief          Symbolic name for the channel Digital_Output_LED_PTB20.
 *
 */
-#define DioConf_DioChannel_DioChannel_pb20  ((uint16)0x0034U)
+#define DioConf_DioChannel_Digital_Output_LED_PTB20  ((uint16)0x0034U)
 /* ---------- DioPort_2 ---------- */
 
 /**

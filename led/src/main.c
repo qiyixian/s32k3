@@ -73,17 +73,17 @@ int main(void)
     {
              /* Get input level of channels */
         /* PTB10 is controlling the LED_RED in XS32K3XXEVB-Q172 EVB board */
-        Dio_WriteChannel(DioConf_DioChannel_DioChannel_pb10, STD_LOW);
+        Dio_WriteChannel(DioConf_DioChannel_DioChannel_LED1, STD_LOW);
         /* PTB20 is controlling the LED_RED in XS32K3XXEVB-Q172 EVB board */
-        Dio_WriteChannel(DioConf_DioChannel_DioChannel_pb20, STD_HIGH);
+        Dio_WriteChannel(DioConf_DioChannel_DioChannel_LED3, STD_HIGH);
         MyDelay(1000000);
 
         /* PTB10 is controlling the LED_RED in XS32K3XXEVB-Q172 EVB board */
-        Dio_WriteChannel(DioConf_DioChannel_DioChannel_pb10, STD_HIGH);
+        Dio_WriteChannel(DioConf_DioChannel_DioChannel_LED1, STD_HIGH);
         /* PTB20 is controlling the LED_RED in XS32K3XXEVB-Q172 EVB board */
-        Dio_WriteChannel(DioConf_DioChannel_DioChannel_pb20, STD_LOW);
+        Dio_WriteChannel(DioConf_DioChannel_DioChannel_LED3, STD_LOW);
         MyDelay(1000000);
-        Dio_WriteChannel(DioConf_DioChannel_DioChannel_pb10, STD_LOW);
+        Dio_WriteChannel(DioConf_DioChannel_DioChannel_LED1, STD_LOW);
         MyDelay(1000000);
 
         if(exit_code != 0)
