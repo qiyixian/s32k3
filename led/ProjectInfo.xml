@@ -15,9 +15,9 @@
         <LinkerCommandFile>E:\Fork\s32k3\led\Project_Settings\Linker_Files\linker_flash_s32k344.icf</LinkerCommandFile>
         <ProjectInfoPath>E:\Fork\s32k3\led\ProjectInfo.xml</ProjectInfoPath>
         <IncludePaths>
+            <Path>E:\Fork\s32k3\led\RTD\include</Path>
             <Path>E:\Fork\s32k3\led\generate\include</Path>
             <Path>E:\Fork\s32k3\led\board</Path>
-            <Path>E:\Fork\s32k3\led\RTD\include</Path>
             <Path>E:\NXP\S32DS.3.5\S32DS\software\PlatformSDK_S32K3\RTD\BaseNXP_TS_T40D34M30I0R0\header</Path>
             <Path>E:\NXP\S32DS.3.5\S32DS\software\PlatformSDK_S32K3\RTD\BaseNXP_TS_T40D34M30I0R0\include</Path>
             <Path>E:\NXP\S32DS.3.5\S32DS\software\PlatformSDK_S32K3\RTD\Platform_TS_T40D34M30I0R0\include</Path>
@@ -45,31 +45,61 @@
             <PathName>E:\Fork\s32k3\led\RTD\src\Adc_Sar_Ip_Irq.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Bctu_Ip.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Bctu_Ip_Irq.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Data.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Divider.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_DividerTrigger.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_ExtOsc.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_FracDiv.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Frequency.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Gate.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_IntOsc.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Irq.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Monitor.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Pll.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_ProgFreqSwitch.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Selector.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Clock_Ip_Specific.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\DSPSS_Api.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Det.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Det_stub.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Dio.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Dio_Ipw.c</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\src\Emios_Gpt_Ip.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\FlexCAN_Ip.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\FlexCAN_Ip_HwAccess.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\FlexCAN_Ip_Irq.c</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\src\Gpt.c</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\src\Gpt_Ipw.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Igf_Port_Ip.c</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\src\Pit_Ip.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Mcu.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Mcu_Dem_Wrapper.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Mcu_Ipw.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\OsIf_Interrupts.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\OsIf_Timer.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\OsIf_Timer_System.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\OsIf_Timer_System_Internal_Systick.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Port.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Port_Ipw.c</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\src\Rtc_Ip.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip_AEC.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip_CortexM7.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip_DCM_GPR.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip_FLASH.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip_MC_ME.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip_MC_RGM.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip_MC_RGM_Irq.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip_PMC.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip_PMC_Irq.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Power_Ip_Private.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Ram_Ip.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\SchM_Adc.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\SchM_Can_43_FLEXCAN.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\SchM_Dio.c</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\src\SchM_Gpt.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\SchM_Mcu.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\SchM_Port.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Sdadc_Ip.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Sdadc_Ip_Irq.c</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\src\Siul2_Dio_Ip.c</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\src\Stm_Ip.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Siul2_Port_Ip.c</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\src\Tspc_Port_Ip.c</PathName>
             <PathName>E:\Fork\s32k3\led\board\Siul2_Port_Ip_Cfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\board\Tspc_Port_Ip_Cfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Adc_Cfg.c</PathName>
@@ -78,13 +108,20 @@
             <PathName>E:\Fork\s32k3\led\generate\src\Adc_Sar_Ip_PBcfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Bctu_Ip_PBcfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Clock_Ip_Cfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\src\Clock_Ip_PBcfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Dio_Cfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\FlexCAN_Ip_Sa_PBcfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Igf_Port_Ip_Cfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Igf_Port_Ip_PBcfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\src\Mcu_Cfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\src\Mcu_PBcfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\OsIf_Cfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Port_Cfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Port_PBcfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\src\Power_Ip_Cfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\src\Power_Ip_PBcfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\src\Ram_Ip_Cfg.c</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\src\Ram_Ip_PBcfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Sdadc_Ip_PBcfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Siul2_Port_Ip_PBcfg.c</PathName>
             <PathName>E:\Fork\s32k3\led\generate\src\Tspc_Port_Ip_PBcfg.c</PathName>
@@ -105,6 +142,20 @@
             <PathName>E:\Fork\s32k3\led\RTD\include\Bctu_Ip.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Bctu_Ip_Irq.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Bctu_Ip_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_001.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_002.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_003.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_004.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_005.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_006.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_007.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_008.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Derivative_009.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Private.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Specific.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_TrustedFunctions.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Clock_Ip_Types.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\DSPSS_Api.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\DSPSS_CFSDADC_MemoryMap.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\DSPSS_CFSDADC_PMEM.h</PathName>
@@ -114,8 +165,6 @@
             <PathName>E:\Fork\s32k3\led\RTD\include\Det_stub.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Dio.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Dio_Ipw.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Emios_Gpt_Ip.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Emios_Gpt_Ip_Types.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\FlexCAN_Ip.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\FlexCAN_Ip_DeviceReg.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\FlexCAN_Ip_HwAccess.h</PathName>
@@ -123,33 +172,57 @@
             <PathName>E:\Fork\s32k3\led\RTD\include\FlexCAN_Ip_TrustedFunctions.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\FlexCAN_Ip_Types.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\FlexCAN_Ip_Wrapper.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Gpt.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Gpt_EnvCfg.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Gpt_Ipw.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Gpt_Ipw_Irq.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Gpt_Ipw_Types.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Gpt_Irq.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Igf_Port_Ip.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Igf_Port_Ip_Types.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Pit_Ip.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Pit_Ip_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Mcu.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Mcu_Dem_Wrapper.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Mcu_EnvCfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Mcu_Ipw.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Mcu_Ipw_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Mcu_TrustedFunctions.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Cfg_TypesDef.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_DeviceRegisters.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Internal.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Interrupts.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Timer_Custom.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Timer_System.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\OsIf_Timer_System_Internal_Systick.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Port.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Port_Ipw.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Rtc_Ip.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Rtc_Ip_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_AEC.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_AEC_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_CortexM7.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_DCM_GPR.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_DCM_GPR_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_FLASH.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_MC_ME.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_MC_ME_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_MC_RGM.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_MC_RGM_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_PMC.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_PMC_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_Private.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_Specific.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_TrustedFunctions.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Power_Ip_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Ram_Ip.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Ram_Ip_Types.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\SchM_Adc.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\SchM_Can_43_FLEXCAN.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\SchM_Dio.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\SchM_Gpt.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\SchM_Mcu.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\SchM_Port.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Sdadc_Ip.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Sdadc_Ip_Irq.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Sdadc_Ip_Types.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Siul2_Dio_Ip.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Siul2_Port_Ip.h</PathName>
             <PathName>E:\Fork\s32k3\led\RTD\include\Siul2_Port_Ip_TrustedFunctions.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Stm_Ip.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Stm_Ip_TrustedFunctions.h</PathName>
-            <PathName>E:\Fork\s32k3\led\RTD\include\Stm_Ip_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Siul2_Port_Ip_Types.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Tspc_Port_Ip.h</PathName>
+            <PathName>E:\Fork\s32k3\led\RTD\include\Tspc_Port_Ip_Types.h</PathName>
             <PathName>E:\Fork\s32k3\led\board\Siul2_Port_Ip_Cfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\board\Tspc_Port_Ip_Cfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Adc_Cfg.h</PathName>
@@ -166,16 +239,26 @@
             <PathName>E:\Fork\s32k3\led\generate\include\Bctu_Ip_PBcfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Clock_Ip_Cfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Clock_Ip_Cfg_Defines.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Clock_Ip_PBcfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Dio_Cfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\FlexCAN_Ip_Cfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\FlexCAN_Ip_CfgDefines.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\FlexCAN_Ip_Sa_PBcfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Igf_Port_Ip_Cfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Igf_Port_Ip_PBcfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Mcu_Cfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Mcu_Ipw_Cfg_Defines.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Mcu_PBcfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\OsIf_ArchCfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\OsIf_Cfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Port_Cfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Port_PBcfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Power_Ip_Cfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Power_Ip_Cfg_Defines.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Power_Ip_PBcfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Ram_Ip_Cfg.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Ram_Ip_Cfg_Defines.h</PathName>
+            <PathName>E:\Fork\s32k3\led\generate\include\Ram_Ip_PBcfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Sdadc_Ip_Cfg.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Sdadc_Ip_CfgDefines.h</PathName>
             <PathName>E:\Fork\s32k3\led\generate\include\Sdadc_Ip_PBcfg.h</PathName>
@@ -203,12 +286,14 @@
                 <Option>-s+</Option>
                 <Option>-r</Option>
                 <Option>-g</Option>
+                <Option>-I..\RTD\include</Option>
                 <Option>-I"E:\Fork\s32k3\led\board"</Option>
                 <Option>--cpu_mode thumb</Option>
             </ASMoptList>
             <CCoptList>
                 <Option>--no_mem_idioms --do_explicit_zero_opt_in_named_sections</Option>
                 <Option>--no_wrap_diagnostics</Option>
+                <Option>-I..\RTD\include</Option>
                 <Option>-IE:\Fork\s32k3\led\generate\include</Option>
                 <Option>-IE:\Fork\s32k3\led\board</Option>
                 <Option>-IE:\Fork\s32k3\led\RTD\include</Option>
@@ -246,6 +331,7 @@
                 <Option>--map "E:\Fork\s32k3\led\Debug\led.map"</Option>
                 <Option>--skip_dynamic_initialization --cpu=Cortex-M7 --fpu VFPv5_sp</Option>
                 <Option>--semihosting</Option>
+                <Option>--srec</Option>
                 <Option>--text_out locale</Option>
                 <Option>--no_bom</Option>
                 <Option>--enable_stack_usage</Option>

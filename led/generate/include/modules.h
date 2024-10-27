@@ -86,7 +86,7 @@ extern "C" {
 /** 
 * @brief This constant used for other modules to check if ADC is present in the project.   
 */
-#define USE_ADC_MODULE              (STD_ON)
+#define USE_ADC_MODULE              (STD_OFF)
 
 /** 
 * @brief This constant used for other modules to check if CAN is present in the project.   
@@ -161,7 +161,7 @@ extern "C" {
 /** 
 * @brief This constant used for other modules to check if GPT is present in the project.   
 */
-#define USE_GPT_MODULE              (STD_ON)
+#define USE_GPT_MODULE              (STD_OFF)
 
 /** 
 * @brief This constant used for other modules to check if I2C is present in the project.   
@@ -206,7 +206,7 @@ extern "C" {
 /** 
 * @brief This constant used for other modules to check if MCU is present in the project.   
 */
-#define USE_MCU_MODULE              (STD_OFF)
+#define USE_MCU_MODULE              (STD_ON)
 
 /** 
 * @brief This constant used for other modules to check if OCU is present in the project.   

@@ -243,7 +243,55 @@ extern "C" {
 /**
 * @brief          Symbolic name for the port DioPort_0.
 */
-#define DioConf_DioPort_DioPort_0  ((uint8)0x00U)
+#define DioConf_DioPort_DioPort_0  ((uint8)0x02U)
+/**
+* @brief          Symbolic name for the channel Digital_Output_LED_PTB10.
+*
+*/
+#define DioConf_DioChannel_DioChannel_pb10  ((uint16)0x002aU)
+/**
+* @brief          Symbolic name for the channel DioChannel_LED1.
+*
+*/
+#define DioConf_DioChannel_DioChannel_LED1  ((uint16)0x002bU)
+/* ---------- DioPort_1 ---------- */
+
+/**
+* @brief          Symbolic name for the port DioPort_1.
+*/
+#define DioConf_DioPort_DioPort_1  ((uint8)0x03U)
+/**
+* @brief          Symbolic name for the channel Digital_Output_LED_PTB20.
+*
+*/
+#define DioConf_DioChannel_DioChannel_pb20  ((uint16)0x0034U)
+/* ---------- DioPort_2 ---------- */
+
+/**
+* @brief          Symbolic name for the port DioPort_2.
+*/
+#define DioConf_DioPort_DioPort_2  ((uint8)0x00U)
+/**
+* @brief          Symbolic name for the channel DioChannel_LED2.
+*
+*/
+#define DioConf_DioChannel_DioChannel_LED2  ((uint16)0x0002U)
+/**
+* @brief          Symbolic name for the channel DioChannel_LED4.
+*
+*/
+#define DioConf_DioChannel_DioChannel_LED4  ((uint16)0x0003U)
+/* ---------- DioPort_3 ---------- */
+
+/**
+* @brief          Symbolic name for the port DioPort_3.
+*/
+#define DioConf_DioPort_DioPort_3  ((uint8)0x07U)
+/**
+* @brief          Symbolic name for the channel DioChannel_LED3.
+*
+*/
+#define DioConf_DioChannel_DioChannel_LED3  ((uint16)0x0078U)
 
 /*=================================================================================================
 *                                             ENUMS
