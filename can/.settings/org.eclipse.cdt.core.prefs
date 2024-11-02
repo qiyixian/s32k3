@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+environment/project/iar.arm.toolchain.project.exe.configuration.debug.v8.0.0.2136321512/PATH/delimiter=;
+environment/project/iar.arm.toolchain.project.exe.configuration.debug.v8.0.0.2136321512/PATH/operation=prepend
+environment/project/iar.arm.toolchain.project.exe.configuration.debug.v8.0.0.2136321512/PATH/value=${MSYS_LOC};
+environment/project/iar.arm.toolchain.project.exe.configuration.debug.v8.0.0.2136321512/append=true
+environment/project/iar.arm.toolchain.project.exe.configuration.debug.v8.0.0.2136321512/appendContributed=true
+environment/project/iar.arm.toolchain.project.exe.configuration.release.v8.0.0.1347088352/PATH/delimiter=;
+environment/project/iar.arm.toolchain.project.exe.configuration.release.v8.0.0.1347088352/PATH/operation=prepend
+environment/project/iar.arm.toolchain.project.exe.configuration.release.v8.0.0.1347088352/PATH/value=${MSYS_LOC};
+environment/project/iar.arm.toolchain.project.exe.configuration.release.v8.0.0.1347088352/append=true
+environment/project/iar.arm.toolchain.project.exe.configuration.release.v8.0.0.1347088352/appendContributed=true
+environment/project/iar.arm.toolchain.v8.0.0.Debug_RAM/PATH/delimiter=;
+environment/project/iar.arm.toolchain.v8.0.0.Debug_RAM/PATH/operation=prepend
+environment/project/iar.arm.toolchain.v8.0.0.Debug_RAM/PATH/value=${MSYS_LOC};
+environment/project/iar.arm.toolchain.v8.0.0.Debug_RAM/append=true
+environment/project/iar.arm.toolchain.v8.0.0.Debug_RAM/appendContributed=true

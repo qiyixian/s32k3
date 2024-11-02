@@ -1,0 +1,637 @@
+###############################################################################
+#
+# IAR ELF Linker V9.32.1.338/W64 for ARM                  02/Nov/2024  09:19:10
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =  can.out
+#    Map file     =  E:/Project/s32k3/can/can/Debug/can.map
+#    Command line =
+#        RTD\src\Clock_Ip.o generate\src\Clock_Ip_Cfg.o RTD\src\Clock_Ip_Data.o
+#        RTD\src\Clock_Ip_Divider.o RTD\src\Clock_Ip_DividerTrigger.o
+#        RTD\src\Clock_Ip_ExtOsc.o RTD\src\Clock_Ip_FracDiv.o
+#        RTD\src\Clock_Ip_Frequency.o RTD\src\Clock_Ip_Gate.o
+#        RTD\src\Clock_Ip_IntOsc.o RTD\src\Clock_Ip_Irq.o
+#        RTD\src\Clock_Ip_Monitor.o RTD\src\Clock_Ip_Pll.o
+#        RTD\src\Clock_Ip_ProgFreqSwitch.o RTD\src\Clock_Ip_Selector.o
+#        RTD\src\Clock_Ip_Specific.o RTD\src\Det.o RTD\src\Det_stub.o
+#        RTD\src\Dio.o generate\src\Dio_Cfg.o RTD\src\Dio_Ipw.o
+#        Project_Settings\Startup_Code\exceptions.o RTD\src\FlexCAN_Ip.o
+#        RTD\src\FlexCAN_Ip_HwAccess.o RTD\src\FlexCAN_Ip_Irq.o
+#        generate\src\FlexCAN_Ip_Sa_PBcfg.o RTD\src\Igf_Port_Ip.o
+#        generate\src\Igf_Port_Ip_Cfg.o generate\src\Igf_Port_Ip_PBcfg.o
+#        RTD\src\IntCtrl_Ip.o generate\src\IntCtrl_Ip_Cfg.o src\main.o
+#        Project_Settings\Startup_Code\nvic.o RTD\src\Os_counter_api.o
+#        RTD\src\Os_multicore.o generate\src\OsIf_Cfg.o
+#        RTD\src\OsIf_Interrupts.o RTD\src\OsIf_Timer.o
+#        RTD\src\OsIf_Timer_System.o
+#        RTD\src\OsIf_Timer_System_Internal_Systick.o RTD\src\Port.o
+#        generate\src\Port_Cfg.o RTD\src\Port_Ipw.o generate\src\Port_PBcfg.o
+#        RTD\src\SchM_Can_43_FLEXCAN.o RTD\src\SchM_Dio.o RTD\src\SchM_Mcu.o
+#        RTD\src\SchM_Port.o RTD\src\Siul2_Dio_Ip.o RTD\src\Siul2_Port_Ip.o
+#        board\Siul2_Port_Ip_Cfg.o generate\src\Siul2_Port_Ip_PBcfg.o
+#        Project_Settings\Startup_Code\startup.o
+#        Project_Settings\Startup_Code\startup_cm7.o
+#        Project_Settings\Startup_Code\system.o RTD\src\Tspc_Port_Ip.o
+#        board\Tspc_Port_Ip_Cfg.o generate\src\Tspc_Port_Ip_PBcfg.o
+#        Project_Settings\Startup_Code\Vector_Table.o -o can.out --config
+#        E:/Project/s32k3/can/can/Project_Settings/Linker_Files/linker_flash_s32k344.icf
+#        --cpu Cortex-M7 --fpu VFPv5_sp --no_wrap_diagnostics --entry
+#        Reset_Handler --map E:/Project/s32k3/can/can/Debug/can.map
+#        --skip_dynamic_initialization --cpu=Cortex-M7 --fpu VFPv5_sp
+#        --semihosting --text_out locale --no_bom --enable_stack_usage
+#
+###############################################################################
+
+*******************************************************************************
+*** MESSAGES
+***
+
+Warning[Ls015]: [stack usage analysis] at least one function appears to be uncalled. Example: "BusFault_Handler". A complete list of uncalled functions is in the map file.
+
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+define block boot_header
+   with fixed order, alignment = 4 { section .boot_header };
+"P1":  place in [from 0x40'0000 to 0x7d'3fff] { first block boot_header };
+define block interrupt_vector_init
+   with fixed order, alignment = 2K { section .intvec_init };
+define block startupBlock
+   with fixed order {
+      section .core_loop, section .startup, section .systeminit };
+define block codeBlock
+   with fixed order {
+      section .text, section .mcal_text, section .acmcu_code_rom };
+define block roBlock
+   with fixed order {
+      section .rodata, section .mcal_const_cfg, section .mcal_const };
+define block initBlock
+   with fixed order {
+      section .init_table, section .zero_table, section .iar.* };
+"P2":  place in [from 0x40'0000 to 0x7d'3fff] {
+          first block interrupt_vector_init, block startupBlock,
+          block codeBlock, block roBlock, block initBlock };
+define block cacheable_data_init
+   with fixed order, alignment = 4 { section .data_init };
+define block cacheable_mcal_data_init
+   with fixed order, alignment = 4 { section .mcal_data_init };
+define block cacheable_code_init
+   with fixed order, alignment = 4 { section .ramcode_init };
+define block non_cacheable_data_init
+   with fixed order, alignment = 4 { section .mcal_data_no_cacheable_init };
+define block non_cacheable_const_init
+   with fixed order, alignment = 4 { section .mcal_const_no_cacheable_init };
+define block shareable_data_init
+   with fixed order, alignment = 4 { section .mcal_shared_data_init };
+"P3":  place in [from 0x40'0000 to 0x7d'3fff] {
+          block cacheable_data_init, block cacheable_mcal_data_init,
+          block cacheable_code_init, block non_cacheable_data_init,
+          block non_cacheable_const_init, block shareable_data_init };
+define block dtcmDataBlock_init
+   with fixed order, alignment = 4 { section .dtcm_data_init };
+define block itcmCodeBlock_init
+   with fixed order, alignment = 4 { section .itcm_text_init };
+"P4":  place in [from 0x40'0000 to 0x7d'3fff] {
+          block dtcmDataBlock_init, block itcmCodeBlock_init };
+define block standbyBlock
+   with fixed order, maximum size = 32K { section .standby_data };
+define block bssBlock
+   with fixed order, alignment = 64 { section .bss, section .mcal_bss };
+"P6":  place in [from 0x2040'0000 to 0x2042'feff] {
+          first block standbyBlock, block bssBlock };
+define block ramCodeBlock with fixed order { section .ramcode };
+define block rwBlock with fixed order { section .data };
+define block rwMcalDataBlock with fixed order { section .mcal_data };
+"P7":  place in [from 0x2040'0000 to 0x2042'feff] {
+          block ramCodeBlock, block rwBlock, block rwMcalDataBlock };
+define block intcVectorBlock
+   with fixed order, alignment = 2K { section .intvec };
+define block dataDtcmBlock
+   with fixed order, alignment = 4 { section .dtcm_data };
+define block bssDtcmBlock with fixed order, alignment = 4 { section .dtcm_bss };
+"P8":  place in [from 0x2000'0000 to 0x2001'efff] {
+          first block intcVectorBlock, block dataDtcmBlock,
+          block bssDtcmBlock };
+define block bssNcBlock
+   with fixed order, alignment = 64 { section .mcal_bss_no_cacheable };
+define block dataNcBlock with fixed order { section .mcal_data_no_cacheable };
+define block constNcBlock with fixed order { section .mcal_const_no_cacheable };
+"P9":  place in [from 0x2043'0000 to 0x2043'feff] {
+          block bssNcBlock, block dataNcBlock, block constNcBlock };
+define block bssShBlock
+   with fixed order, alignment = 64 { section .mcal_shared_bss };
+"P10": place in [from 0x2044'0000 to 0x2044'3fff] { block bssShBlock };
+define block dataShBlock with fixed order { section .mcal_shared_data };
+"P11": place in [from 0x2044'0000 to 0x2044'3fff] { block dataShBlock };
+define block intResultsBlock
+   with fixed order, size = 256, alignment = 4 { section .intresult };
+"P12": place in [from 0x2043'ff00 to 0x2043'ffff] { block intResultsBlock };
+define block textItcmBlock
+   with fixed order, alignment = 4 { section .itcm_text };
+"P13": place in [from 0x0 to 0xffff] { block textItcmBlock };
+do not initialize {
+   section .standby_data, section .bss, section .mcal_bss,
+   section .mcal_bss_no_cacheable, section .mcal_shared_bss, section .data,
+   section .mcal_data, section .mcal_data_no_cacheable,
+   section .mcal_shared_data, section .mcal_const_no_cacheable,
+   section .ramcode, section .dtcm_data, section .itcm_text };
+initialize manually with packing = none {
+   section .data, section .mcal_data, section .mcal_data_no_cacheable,
+   section .mcal_shared_data, section .mcal_const_no_cacheable,
+   section .ramcode, section .intvec, section .dtcm_data, section .itcm_text };
+
+No sections matched the following patterns:
+
+  section .acfls_code_rom                in block AppACFLSCode
+  section .acmcu_code_rom                in block codeBlock
+  section .data                          in block rwBlock
+  section .data_init                     in block cacheable_data_init
+  section .dtcm_bss                      in block bssDtcmBlock
+  section .dtcm_data                     in block dataDtcmBlock
+  section .dtcm_data_init                in block dtcmDataBlock_init
+  section .iar.*                         in block initBlock
+  section .intresult                     in block intResultsBlock
+  section .itcm_text                     in block textItcmBlock
+  section .itcm_text_init                in block itcmCodeBlock_init
+  section .mcal_bss_no_cacheable         in block bssNcBlock
+  section .mcal_const                    in block roBlock
+  section .mcal_const_cfg                in block roBlock
+  section .mcal_const_no_cacheable       in block constNcBlock
+  section .mcal_const_no_cacheable_init  in block non_cacheable_const_init
+  section .mcal_data                     in block rwMcalDataBlock
+  section .mcal_data_init                in block cacheable_mcal_data_init
+  section .mcal_data_no_cacheable        in block dataNcBlock
+  section .mcal_data_no_cacheable_init   in block non_cacheable_data_init
+  section .mcal_shared_bss               in block bssShBlock
+  section .mcal_shared_data              in block dataShBlock
+  section .mcal_shared_data_init         in block shareable_data_init
+  section .ramcode                       in block ramCodeBlock
+  section .ramcode_init                  in block cacheable_code_init
+  section .rodata                        in block roBlock
+  section .standby_data                  in block standbyBlock
+  section .systeminit                    in block startupBlock
+
+
+  Section                 Kind         Address   Size  Object
+  -------                 ----         -------   ----  ------
+"P13":                                            0x0
+  textItcmBlock                            0x0    0x0  <Block>
+
+"P1":                                            0x30
+  boot_header                        0x40'0000   0x30  <Block>
+    .boot_header          const      0x40'0000   0x30  startup_cm7.o [1]
+                                   - 0x40'0030   0x30
+
+"P2":                                           0xa32
+  interrupt_vector_init              0x40'0800  0x408  <Block>
+    Initializer bytes     const      0x40'0800  0x408  <for section .intvec-1>
+  initBlock                          0x40'0c10   0x94  <Block>
+    .init_table           const      0x40'0c10   0x70  startup_cm7.o [1]
+    .zero_table           const      0x40'0c80   0x24  startup_cm7.o [1]
+  startupBlock                       0x40'0ca4  0x1dc  <Block>
+    .core_loop            ro code    0x40'0ca4    0xa  startup_cm7.o [1]
+    .startup              ro code    0x40'0cb0  0x1d0  startup_cm7.o [1]
+  codeBlock                          0x40'0e80  0x3b2  <Block>
+    .text                 ro code    0x40'0e80   0x10  main.o [5]
+    .text                 ro code    0x40'0e90   0x22  fpinit_M.o [6]
+    .text                 ro code    0x40'0eb2    0x4  Os_counter_api.o [2]
+    .mcal_text            ro code    0x40'0eb8   0xac  startup.o [1]
+    .mcal_text            ro code    0x40'0f64  0x2ba  system.o [1]
+    .mcal_text            ro code    0x40'121e    0x2  exceptions.o [1]
+    .mcal_text            ro code    0x40'1220    0x2  exceptions.o [1]
+    .mcal_text            ro code    0x40'1222    0x2  exceptions.o [1]
+    .mcal_text            ro code    0x40'1224    0x2  exceptions.o [1]
+    .mcal_text            ro code    0x40'1226    0x2  exceptions.o [1]
+    .mcal_text            ro code    0x40'1228    0x2  exceptions.o [1]
+    .mcal_text            ro code    0x40'122a    0x2  exceptions.o [1]
+    .mcal_text            ro code    0x40'122c    0x2  exceptions.o [1]
+    .mcal_text            ro code    0x40'122e    0x2  exceptions.o [1]
+    .mcal_text            ro code    0x40'1230    0x2  exceptions.o [1]
+                                   - 0x40'1232  0xa32
+
+"P3-P4":                                          0x0
+  cacheable_data_init                0x40'1234    0x0  <Block>
+  cacheable_mcal_data_init
+                                     0x40'1234    0x0  <Block>
+  cacheable_code_init                0x40'1234    0x0  <Block>
+  non_cacheable_data_init
+                                     0x40'1234    0x0  <Block>
+  non_cacheable_const_init
+                                     0x40'1234    0x0  <Block>
+  shareable_data_init                0x40'1234    0x0  <Block>
+  dtcmDataBlock_init                 0x40'1234    0x0  <Block>
+  itcmCodeBlock_init                 0x40'1234    0x0  <Block>
+
+"P8":                                           0x408
+  intcVectorBlock                  0x2000'0000  0x408  <Block>
+    section .intvec-1              0x2000'0000  0x408  <Init block>
+      .intvec             inited   0x2000'0000  0x408  Vector_Table.o [1]
+  dataDtcmBlock                    0x2000'0408    0x0  <Block>
+                                 - 0x2000'0408  0x408
+
+"P6":                                            0x80
+  bssBlock                         0x2040'0000   0x80  <Block>
+    .bss                           0x2040'0000   0x7c  <Block>
+      .bss                uninit   0x2040'0000    0x4  main.o [5]
+      .bss                uninit   0x2040'0004   0x3c  system.o [1]
+      .bss                uninit   0x2040'0040   0x3c  system.o [1]
+    .mcal_bss                      0x2040'007c    0x4  <Block>
+      .mcal_bss           uninit   0x2040'007c    0x4  system.o [1]
+                                 - 0x2040'0080   0x80
+
+"P7":                                             0x0
+  ramCodeBlock                     0x2040'0080    0x0  <Block>
+  rwBlock                          0x2040'0080    0x0  <Block>
+  rwMcalDataBlock                  0x2040'0080    0x0  <Block>
+
+"P9":                                             0x0
+  dataNcBlock                      0x2043'0000    0x0  <Block>
+  constNcBlock                     0x2043'0000    0x0  <Block>
+
+"P12":                                          0x100
+  intResultsBlock                  0x2043'ff00  0x100  <Block>
+    intResultsBlock       uninit   0x2043'ff00  0x100  <Block tail>
+                                 - 0x2044'0000  0x100
+
+"P10-P11":                                        0x0
+  dataShBlock                      0x2044'0000    0x0  <Block>
+
+Unused ranges:
+
+         From           To       Size
+         ----           --       ----
+          0x0       0xffff   0x1'0000
+    0x40'0030    0x40'07ff      0x7d0
+    0x40'1232    0x40'1233        0x2
+    0x40'1234    0x7d'3fff  0x3d'2dcc
+  0x2000'0408  0x2001'efff   0x1'ebf8
+  0x2040'0080  0x2042'feff   0x2'fe80
+  0x2043'0000  0x2043'feff     0xff00
+  0x2044'0000  0x2044'3fff     0x4000
+
+
+*******************************************************************************
+*** STACK USAGE
+***
+
+  Call Graph Root Category  Max Use  Total Use
+  ------------------------  -------  ---------
+  Uncalled function             24         64
+
+
+Uncalled function
+  "BusFault_Handler": 0x40'1225
+
+  Maximum call chain                                0  bytes
+
+    "BusFault_Handler"                              0
+
+Uncalled function
+  "DebugMon_Handler": 0x40'122b
+
+  Maximum call chain                                0  bytes
+
+    "DebugMon_Handler"                              0
+
+Uncalled function
+  "HardFault_Handler": 0x40'1221
+
+  Maximum call chain                                0  bytes
+
+    "HardFault_Handler"                             0
+
+Uncalled function
+  "MemManage_Handler": 0x40'1223
+
+  Maximum call chain                                0  bytes
+
+    "MemManage_Handler"                             0
+
+Uncalled function
+  "NMI_Handler": 0x40'121f
+
+  Maximum call chain                                0  bytes
+
+    "NMI_Handler"                                   0
+
+Uncalled function
+  "PendSV_Handler": 0x40'122d
+
+  Maximum call chain                                0  bytes
+
+    "PendSV_Handler"                                0
+
+Uncalled function
+  "SVC_Handler": 0x40'1229
+
+  Maximum call chain                                0  bytes
+
+    "SVC_Handler"                                   0
+
+Uncalled function
+  "SysTick_Handler": 0x40'122f
+
+  Maximum call chain                                0  bytes
+
+    "SysTick_Handler"                               0
+
+Uncalled function
+  "UsageFault_Handler": 0x40'1227
+
+  Maximum call chain                                0  bytes
+
+    "UsageFault_Handler"                            0
+
+Uncalled function
+  "undefined_handler": 0x40'1231
+
+  Maximum call chain                                0  bytes
+
+    "undefined_handler"                             0
+
+Uncalled function
+  "main": 0x40'0e81
+
+  Maximum call chain                                0  bytes
+
+    "main"                                          0
+
+Uncalled function
+  "init_data_bss": 0x40'0eb9
+
+  Maximum call chain                               20  bytes
+
+    "init_data_bss"                                20
+
+Uncalled function
+  "init_data_bss_core2": 0x40'0eff
+
+  Maximum call chain                               20  bytes
+
+    "init_data_bss_core2"                          20
+
+Uncalled function
+  "SystemInit": 0x40'0f69
+
+  Maximum call chain                               24  bytes
+
+    "SystemInit"                                   24
+    "GetCoreID"                                     0
+
+Uncalled function
+  "startup_go_to_user_mode": 0x40'0f65
+
+  Maximum call chain                                0  bytes
+
+    "startup_go_to_user_mode"                       0
+
+Uncalled function
+  "__iar_init_vfp": 0x40'0e91
+
+  Maximum call chain                                0  bytes
+
+    "__iar_init_vfp"                                0
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+E:\Project\s32k3\can\can\Debug\Project_Settings\Startup_Code: [1]
+    Vector_Table.o               1'032    1'032
+    exceptions.o           20
+    startup.o             172
+    startup_cm7.o         474      196
+    system.o              698               124
+    -------------------------------------------
+    Total:              1'364    1'228    1'156
+
+E:\Project\s32k3\can\can\Debug\RTD\src: [2]
+    Os_counter_api.o        4
+    -------------------------------------------
+    Total:                  4
+
+E:\Project\s32k3\can\can\Debug\board: [3]
+    -------------------------------------------
+    Total:
+
+E:\Project\s32k3\can\can\Debug\generate\src: [4]
+    -------------------------------------------
+    Total:
+
+E:\Project\s32k3\can\can\Debug\src: [5]
+    main.o                 16                 4
+    -------------------------------------------
+    Total:                 16                 4
+
+m7M_tls.a: [6]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+    Gaps                    4
+    Linker created                          256
+-----------------------------------------------
+    Grand Total:        1'422    1'228    1'416
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.bss$$Base              0x2040'0000          --   Gb  - Linker created -
+.bss$$Limit             0x2040'007c          --   Gb  - Linker created -
+.mcal_bss$$Base         0x2040'007c          --   Gb  - Linker created -
+.mcal_bss$$Limit        0x2040'0080          --   Gb  - Linker created -
+.mcal_bss_no_cacheable$$Base
+                                0x0          --   Gb  - Linker created -
+.mcal_bss_no_cacheable$$Limit
+                                0x0          --   Gb  - Linker created -
+.mcal_shared_bss$$Base          0x0          --   Gb  - Linker created -
+.mcal_shared_bss$$Limit
+                                0x0          --   Gb  - Linker created -
+BusFault_Handler          0x40'1225    0x2  Code  Wk  exceptions.o [1]
+DebugMon_Handler          0x40'122b    0x2  Code  Wk  exceptions.o [1]
+Fls_ACEraseRomEnd {Abs}
+                          0x7d'4000         Data  Gb  <internal module>
+Fls_ACEraseRomStart {Abs}
+                          0x7d'3f00         Data  Gb  <internal module>
+Fls_ACEraseSize {Abs}          0x40         Data  Gb  <internal module>
+Fls_ACWriteRomEnd {Abs}
+                          0x7d'4000         Data  Gb  <internal module>
+Fls_ACWriteRomStart {Abs}
+                          0x7d'3f00         Data  Gb  <internal module>
+Fls_ACWriteSize {Abs}          0x40         Data  Gb  <internal module>
+GetCoreID                 0x40'0eb3    0x4  Code  Gb  Os_counter_api.o [2]
+HardFault_Handler         0x40'1221    0x2  Code  Wk  exceptions.o [1]
+MCAL_LTB_TRACE_OFF        0x40'0df9         Code  Gb  startup_cm7.o [1]
+MemManage_Handler         0x40'1223    0x2  Code  Wk  exceptions.o [1]
+NMI_Handler               0x40'121f    0x2  Code  Wk  exceptions.o [1]
+PendSV_Handler            0x40'122d    0x2  Code  Wk  exceptions.o [1]
+RESET_CATCH_CORE        0x2040'007c    0x4  Data  Gb  system.o [1]
+Reset_Handler             0x40'0cb1         Code  Wk  startup_cm7.o [1]
+SVC_Handler               0x40'1229    0x2  Code  Wk  exceptions.o [1]
+SysTick_Handler           0x40'122f    0x2  Code  Wk  exceptions.o [1]
+SystemInit                0x40'0f69  0x234  Code  Gb  system.o [1]
+UsageFault_Handler        0x40'1227    0x2  Code  Wk  exceptions.o [1]
+VTABLE                  0x2000'0000         Data  Gb  Vector_Table.o [1]
+_ERASE_FUNC_ADDRESS_ {Abs}
+                        0x2042'ff00         Data  Gb  <internal module>
+_WRITE_FUNC_ADDRESS_ {Abs}
+                        0x2042'ff00         Data  Gb  <internal module>
+__CORE0_VTOR {Abs}        0x40'0800         Data  Gb  <internal module>
+__CORE1_VTOR {Abs}        0x40'0800         Data  Gb  <internal module>
+__CORE2_VTOR {Abs}        0x40'0800         Data  Gb  <internal module>
+__DTCM_INIT {Abs}               0x1         Data  Gb  <internal module>
+__ENTRY_VTABLE {Abs}      0x40'0800         Data  Gb  <internal module>
+__INDEX_COPY_CORE2 {Abs}
+                                0x6         Data  Gb  <internal module>
+__INIT_TABLE              0x40'0c10         Data  Gb  startup_cm7.o [1]
+__INT_DTCM_END {Abs}    0x2002'0000         Data  Gb  <internal module>
+__INT_DTCM_START {Abs}  0x2000'0000         Data  Gb  <internal module>
+__INT_ITCM_END {Abs}       0x1'0000         Data  Gb  <internal module>
+__INT_ITCM_START {Abs}          0x0         Data  Gb  <internal module>
+__INT_SRAM_END {Abs}    0x2044'4000         Data  Gb  <internal module>
+__INT_SRAM_START {Abs}  0x2040'0000         Data  Gb  <internal module>
+__ITCM_INIT {Abs}               0x1         Data  Gb  <internal module>
+__RAM_CACHEABLE_SIZE {Abs}
+                               0x12         Data  Gb  <internal module>
+__RAM_INIT {Abs}                0x1         Data  Gb  <internal module>
+__RAM_INTERRUPT_START {Abs}
+                        0x2000'0000         Data  Gb  <internal module>
+__RAM_NO_CACHEABLE_SIZE {Abs}
+                               0x10         Data  Gb  <internal module>
+__RAM_NO_CACHEABLE_START {Abs}
+                        0x2043'0000         Data  Gb  <internal module>
+__RAM_SHAREABLE_SIZE {Abs}
+                                0xe         Data  Gb  <internal module>
+__RAM_SHAREABLE_START {Abs}
+                        0x2044'0000         Data  Gb  <internal module>
+__ROM_CODE_START {Abs}    0x40'0000         Data  Gb  <internal module>
+__ROM_DATA_START {Abs}  0x1000'0000         Data  Gb  <internal module>
+__Stack_dtcm_end {Abs}  0x2001'f000         Data  Gb  <internal module>
+__Stack_dtcm_start {Abs}
+                        0x2002'0000         Data  Gb  <internal module>
+__ZERO_TABLE              0x40'0c80         Data  Gb  startup_cm7.o [1]
+__iar_init_vfp            0x40'0e91         Code  Gb  fpinit_M.o [6]
+_core_loop                0x40'0ca5         Code  Gb  startup_cm7.o [1]
+_end_of_eunit_test        0x40'0dfb         Code  Gb  startup_cm7.o [1]
+_start                    0x40'0cb1         Code  Gb  startup_cm7.o [1]
+boot_header$$Base         0x40'0000          --   Gb  - Linker created -
+boot_header$$Limit        0x40'0030          --   Gb  - Linker created -
+bssBlock$$Base          0x2040'0000          --   Gb  - Linker created -
+bssBlock$$Limit         0x2040'0080          --   Gb  - Linker created -
+cacheable_code_init$$Base
+                          0x40'1234          --   Gb  - Linker created -
+cacheable_code_init$$Limit
+                          0x40'1234          --   Gb  - Linker created -
+cacheable_data_init$$Base
+                          0x40'1234          --   Gb  - Linker created -
+cacheable_data_init$$Limit
+                          0x40'1234          --   Gb  - Linker created -
+cacheable_mcal_data_init$$Base
+                          0x40'1234          --   Gb  - Linker created -
+cacheable_mcal_data_init$$Limit
+                          0x40'1234          --   Gb  - Linker created -
+codeBlock$$Base           0x40'0e80          --   Gb  - Linker created -
+codeBlock$$Limit          0x40'1232          --   Gb  - Linker created -
+constNcBlock$$Base      0x2043'0000          --   Gb  - Linker created -
+constNcBlock$$Limit     0x2043'0000          --   Gb  - Linker created -
+dataDtcmBlock$$Base     0x2000'0408          --   Gb  - Linker created -
+dataDtcmBlock$$Limit    0x2000'0408          --   Gb  - Linker created -
+dataNcBlock$$Base       0x2043'0000          --   Gb  - Linker created -
+dataNcBlock$$Limit      0x2043'0000          --   Gb  - Linker created -
+dataShBlock$$Base       0x2044'0000          --   Gb  - Linker created -
+dataShBlock$$Limit      0x2044'0000          --   Gb  - Linker created -
+dtcmDataBlock_init$$Base
+                          0x40'1234          --   Gb  - Linker created -
+dtcmDataBlock_init$$Limit
+                          0x40'1234          --   Gb  - Linker created -
+exit_code               0x2040'0000    0x4  Data  Gb  main.o [5]
+initBlock$$Base           0x40'0c10          --   Gb  - Linker created -
+initBlock$$Limit          0x40'0ca4          --   Gb  - Linker created -
+init_data_bss             0x40'0eb9   0x46  Code  Gb  startup.o [1]
+init_data_bss_core2       0x40'0eff    0xc  Code  Gb  startup.o [1]
+intResultsBlock$$Base   0x2043'ff00          --   Gb  - Linker created -
+intResultsBlock$$Limit  0x2044'0000          --   Gb  - Linker created -
+intcVectorBlock$$Base   0x2000'0000          --   Gb  - Linker created -
+intcVectorBlock$$Limit  0x2000'0408          --   Gb  - Linker created -
+interrupt_vector_init$$Base
+                          0x40'0800          --   Gb  - Linker created -
+interrupt_vector_init$$Limit
+                          0x40'0c08          --   Gb  - Linker created -
+itcmCodeBlock_init$$Base
+                          0x40'1234          --   Gb  - Linker created -
+itcmCodeBlock_init$$Limit
+                          0x40'1234          --   Gb  - Linker created -
+main                      0x40'0e81   0x10  Code  Gb  main.o [5]
+non_cacheable_const_init$$Base
+                          0x40'1234          --   Gb  - Linker created -
+non_cacheable_const_init$$Limit
+                          0x40'1234          --   Gb  - Linker created -
+non_cacheable_data_init$$Base
+                          0x40'1234          --   Gb  - Linker created -
+non_cacheable_data_init$$Limit
+                          0x40'1234          --   Gb  - Linker created -
+ramCodeBlock$$Base      0x2040'0080          --   Gb  - Linker created -
+ramCodeBlock$$Limit     0x2040'0080          --   Gb  - Linker created -
+rasr                    0x2040'0040   0x3c  Data  Gb  system.o [1]
+rbar                    0x2040'0004   0x3c  Data  Gb  system.o [1]
+rwBlock$$Base           0x2040'0080          --   Gb  - Linker created -
+rwBlock$$Limit          0x2040'0080          --   Gb  - Linker created -
+rwMcalDataBlock$$Base   0x2040'0080          --   Gb  - Linker created -
+rwMcalDataBlock$$Limit  0x2040'0080          --   Gb  - Linker created -
+shareable_data_init$$Base
+                          0x40'1234          --   Gb  - Linker created -
+shareable_data_init$$Limit
+                          0x40'1234          --   Gb  - Linker created -
+startupBlock$$Base        0x40'0ca4          --   Gb  - Linker created -
+startupBlock$$Limit       0x40'0e80          --   Gb  - Linker created -
+startup_go_to_user_mode
+                          0x40'0f65    0x2  Code  Gb  system.o [1]
+textItcmBlock$$Base             0x0          --   Gb  - Linker created -
+textItcmBlock$$Limit            0x0          --   Gb  - Linker created -
+undefined_handler         0x40'1231    0x2  Code  Gb  exceptions.o [1]
+
+
+[1] = E:\Project\s32k3\can\can\Debug\Project_Settings\Startup_Code
+[2] = E:\Project\s32k3\can\can\Debug\RTD\src
+[3] = E:\Project\s32k3\can\can\Debug\board
+[4] = E:\Project\s32k3\can\can\Debug\generate\src
+[5] = E:\Project\s32k3\can\can\Debug\src
+[6] = m7M_tls.a
+
+  1'422 bytes of readonly  code memory
+  1'228 bytes of readonly  data memory
+  1'416 bytes of readwrite data memory
+
+Errors: none
+Warnings: 1
